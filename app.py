@@ -41,9 +41,6 @@ def get_students():
         student_list.append(student)
     return jsonify(student_list)
 
-# -------------------------
-# 4️⃣ READ SINGLE: Get one student
-# -------------------------
 @app.route("/students/<id>", methods=["GET"])
 def get_student(id):
     student = students.find_one({"_id": ObjectId(id)})
@@ -52,9 +49,6 @@ def get_student(id):
         return jsonify(student)
     return jsonify({"error": "Student not found"}), 404
 
-# -------------------------
-# 5️⃣ UPDATE: Update student info
-# -------------------------
 @app.route("/students/<id>", methods=["PUT"])
 def update_student(id):
     data = request.json
@@ -66,9 +60,6 @@ def update_student(id):
         return jsonify({"message": "Student updated successfully"})
     return jsonify({"message": "No changes made or student not found"}), 404
 
-# -------------------------
-# 6️⃣ DELETE: Remove student
-# -------------------------
 @app.route("/students/<id>", methods=["DELETE"])
 def delete_student(id):
     result = students.delete_one({"_id": ObjectId(id)})

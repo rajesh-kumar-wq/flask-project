@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AcademiaDB — Sign In</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/static/loginpg.css"/>
+</head>
+<body>
+
+<div class="login-root">
+
+  <div class="login-panel">
+    <div class="login-brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 2L3 6v4c0 4 3.1 7.7 7 8.9C13.9 17.7 17 14 17 10V6L10 2z" fill="white" fill-opacity="0.9"/>
+          <path d="M7 10l2 2 4-4" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="brand-name">AcademiaDB</span>
+    </div>
+
+    <h1 class="login-heading">Welcome back</h1>
+    <p class="login-sub">Sign in to manage student records</p>
+
+    <div class="field-group">
+      <label class="field-label" for="email">Email address</label>
+      <input class="field-input" type="email" id="email" placeholder="you@institution.edu"/>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="password">Password</label>
+      <input class="field-input" type="password" id="password" placeholder="••••••••"/>
+    </div>
+
+    <div class="field-row">
+      <label class="remember-wrap">
+        <input type="checkbox"/> Remember me
+      </label>
+      <a href="#" class="forgot-link">Forgot password?</a>
+    </div>
+
+    <button class="btn-login" onclick="handleLogin()">Sign in</button>
+
+    <p class="login-footer">Protected by institutional security policy &middot; v4.2.1</p>
+  </div>
+
+</div>
+
+<script src="/static/loginpg.js"></script>
+
+</body>
+</html>
