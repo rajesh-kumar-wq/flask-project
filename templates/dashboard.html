@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcademiaDB Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 20 20" fill="none">
+                        <path d="M10 2L3 6v4c0 4 3.1 7.7 7 8.9C13.9 17.7 17 14 17 10V6L10 2z" fill="white"
+                            fill-opacity="0.9" />
+                        <path d="M7 10l2 2 4-4" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <span class="brand-name">AcademiaDB</span>
+            </div>
+
+            <ul class="menu">
+                <li class="active">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Dashboard
+                </li>
+                <li>
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Students
+                </li>
+                <li>
+                    <i class="fa-solid fa-book"></i>
+                    Courses
+                </li>
+                <li>
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </li>
+            </ul>
+
+            <div class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <input class="search" placeholder="Search students...">
+                <button class="add-btn" onclick="openForm()">Add Student</button>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Students</h3>
+                    <p id="studentCount">0</p>
+                </div>
+                <div class="card">
+                    <h3>Courses</h3>
+                    <p>8</p>
+                </div>
+                <div class="card">
+                    <h3>Active Users</h3>
+                    <p>35</p>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Course</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="studentForm" class="modal">
+        <div class="modal-content">
+            <h2>Add Student</h2>
+            <input id="name" placeholder="Student Name">
+            <input id="age" placeholder="Age">
+            <input id="course" placeholder="Course">
+            <div class="form-buttons">
+                <button class="save-btn" onclick="addStudent()">Save</button>
+                <button class="cancel-btn" onclick="closeForm()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/dashboard.js"></script>
+</body>
+
+</html>
